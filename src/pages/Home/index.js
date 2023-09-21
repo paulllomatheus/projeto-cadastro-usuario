@@ -22,12 +22,23 @@ const App = () => {
   const history = useHistory()
 
   const addNewUser = async (e) => {
-    const { data: newUser } = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value,
-      age: inputAge.current.value,
-    })
-    setUsers([...users, newUser])
-    history.push("/users")
+    if (inputName.current.value === "" && inputAge.current.value === "") {
+      alert("Insira o Nome e a Idade do usuário")
+    } else if (inputName.current.value === "") {
+      alert("Insira o Nome do usuário")
+    } else if (inputAge.current.value === "") {
+      alert("Insira a Idade do usuário")
+    } else {
+      const { data: newUser } = await axios.post(
+        "http://localhost:3001/users",
+        {
+          name: inputName.current.value,
+          age: inputAge.current.value,
+        }
+      )
+      setUsers([...users, newUser])
+      history.push("/users")
+    }
   }
 
   return (
