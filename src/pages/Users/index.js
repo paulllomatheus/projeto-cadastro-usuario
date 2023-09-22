@@ -6,7 +6,9 @@ import Avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
 import Trash from "../../assets/trash.svg"
 
-import { Container, Image, ContainerItens, H1, Button, User } from "./styles"
+import ContainerItens from "../../components/ContainerItens"
+import H1 from "../../components/Title"
+import { Container, Image, Button, User } from "./styles"
 
 const Users = () => {
   const [users, setUsers] = useState([])
@@ -35,7 +37,7 @@ const Users = () => {
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar}></Image>
-      <ContainerItens>
+      <ContainerItens isblur={"true"}>
         <H1>Usuários</H1>
         <ul>
           {users.map((user) => (

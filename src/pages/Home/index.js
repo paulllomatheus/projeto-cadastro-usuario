@@ -5,15 +5,9 @@ import axios from "axios"
 import People from "../../assets/people.svg"
 import Arrow from "../../assets/arrow.svg"
 
-import {
-  Container,
-  Image,
-  ContainerItens,
-  H1,
-  InputLabel,
-  Input,
-  Button,
-} from "./styles"
+import H1 from "../../components/Title"
+import ContainerItens from "../../components/ContainerItens"
+import { Container, Image, InputLabel, Input, Button } from "./styles"
 
 const App = () => {
   const [users, setUsers] = useState([])

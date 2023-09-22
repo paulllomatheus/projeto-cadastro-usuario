@@ -18,34 +18,6 @@ export const Image = styled.img`
   margin-top: 30px;
 `
 
-export const ContainerItens = styled.div`
-  height: 100vh;
-  width: 414px;
-
-  border-radius: 61px 61px 0px 0px;
-  background: linear-gradient(
-    157deg,
-    rgba(255, 255, 255, 0.6) 0.84%,
-    rgba(255, 255, 255, 0.6) 0.85%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-
-  display: flex;
-  flex-direction: column;
-  padding: 50px 36px;
-`
-
-export const H1 = styled.h1`
-  color: #fff;
-  text-align: center;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-
-  margin-bottom: 81px;
-`
-
 export const InputLabel = styled.p`
   padding-left: 25px;
 
