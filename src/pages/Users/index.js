@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react"
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 import Avatar from "../../assets/avatar.svg"
@@ -10,7 +10,7 @@ import { Container, Image, ContainerItens, H1, Button, User } from "./styles"
 
 const Users = () => {
   const [users, setUsers] = useState([])
-  const history = useHistory()
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchUsers() {
@@ -29,7 +29,7 @@ const Users = () => {
   }
 
   const goBackPage = () => {
-    history.push("/")
+    navigate("/")
   }
 
   return (
